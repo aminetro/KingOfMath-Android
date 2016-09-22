@@ -1,0 +1,60 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+    </style>
+
+    <style name="ActionBar" parent="android:Widget.ActionBar">
+        <item name="android:background">@color/actionbar_color</item>
+        <item name="android:icon">@android:color/transparent</item>
+        <item name="android:titleTextStyle">@style/ActionBar.TitleText</item>
+    </style>
+
+    <style name="ActionBar.TitleText" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+
+        <style name="DialogNoAnimation">
+            <item name="android:windowEnterAnimation">@null</item>
+            <item name="android:windowExitAnimation">@null</item>
+        </style>
+
+        <style name="Material"></style>
+
+        <style name="Material.Drawable"></style>
+
+        <style name="Material.Widget"></style>
+
+        <style name="Material.App"></style>
+
+        <style name="Material.TextAppearance"></style>
+
+        <style name="Material.Drawable.CircularProgress">
+            <item name="cpd_padding">0dp</item>
+            <item name="cpd_initialAngle">0</item>
+            <item name="cpd_maxSweepAngle">270</item>
+            <item name="cpd_minSweepAngle">1</item>
+            <item name="cpd_strokeSize">4dp</item>
+            <item name="cpd_strokeColor">?attr/colorPrimary</item>
+            <item name="cpd_strokeSecondaryColor">@android:color/transparent</item>
+            <item name="cpd_reverse">false</item>
+            <item name="cpd_rotateDuration">1000</item>
+            <item name="cpd_transformDuration">600</item>
+            <item name="cpd_keepDuration">200</item>
+            <item name="cpd_transformInterpolator">@android:anim/decelerate_interpolator</item>
+            <item name="pv_progressMode">indeterminate</item>
+            <item name="cpd_inAnimDuration">0</item>
+            <item name="cpd_outAnimDuration">@android:integer/config_mediumAnimTime</item>
+        </style>
+
+        <style name="Material.Drawable.CircularProgress.Determinate" parent="Material.Drawable.CircularProgress">
+            <item name="pv_progressMode">determinate</item>
+            <item name="cpd_inAnimDuration">@android:integer/config_mediumAnimTime</item>
+        </style>
+
+
+    </resources>
+

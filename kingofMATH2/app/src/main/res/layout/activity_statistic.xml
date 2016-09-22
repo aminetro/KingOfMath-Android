@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/b8"
+    tools:context="com.example.admin.kingofmath2.StatisticActivity">
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/ProfilPhoto"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+   <TextView android:id="@+id/NomProfil"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:text="Mohamed amine "
+       android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp"
+       android:layout_alignBottom="@+id/ProfilPhoto"
+       android:layout_toRightOf="@+id/ProfilPhoto"
+       android:layout_toEndOf="@+id/ProfilPhoto" />
+
+     <TextView android:id="@+id/scoreQuiz"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+
+
+        android:text="Mohamed amine"
+         android:layout_marginTop="60dp"
+         android:gravity="center"
+         android:layout_below="@+id/ProfilPhoto"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentEnd="true"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentStart="true" />
+
+   <TextView android:id="@+id/scoreAdventure"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+
+        android:text="Mohamed amine"
+       android:layout_marginTop="60dp"
+       android:gravity="center"
+       android:layout_below="@+id/scoreQuiz"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentStart="true"
+       android:layout_alignParentRight="true"
+       android:layout_alignParentEnd="true" />
+
+    <TextView android:id="@+id/scoreT"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+
+        android:text="Mohamed amine"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:layout_below="@+id/scoreAdventure"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

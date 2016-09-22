@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">kingofMATH2</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_leader_board">LeaderBoardActivity</string>
+    <string name="app_id">885154694914025</string>
+    <string name="title_activity_statistic">StatisticActivity</string>
+    <string name="title_activity_tutorial_">Tutorial_Activity</string>
+
+</resources>

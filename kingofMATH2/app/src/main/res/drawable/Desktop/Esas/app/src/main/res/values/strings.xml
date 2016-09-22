@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DevCompiler</string>
+    <string name="app_description">Android drawer icon with material design animation</string>
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+    <string name="newfile">New File</string>
+    <string name="quizz">Quizz</string>
+    <string name="load">Load old file</string>
+    <string name="other">Other Apps</string>
+    <string name="feed">Feed</string>
+
+</resources>
