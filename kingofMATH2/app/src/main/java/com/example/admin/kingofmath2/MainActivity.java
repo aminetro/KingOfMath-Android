@@ -44,11 +44,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main);
+        connect=(Button)findViewById(R.id.button);
+
+
+
         player1=(ImageButton)findViewById(R.id.player1);
         player2=(ImageButton)findViewById(R.id.player2);
         player3=(ImageButton)findViewById(R.id.player3);
         player4=(ImageButton)findViewById(R.id.player4);
-        connect=(Button)findViewById(R.id.button);
 
         Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.player1);
         roundedImage1 = new RoundImage(bm);
@@ -363,6 +366,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         SharedPreferences.Editor editor=share.edit();
                         editor.putString("loginShared", login);
                         editor.putString("positionImage", String.valueOf(positionImage));
+                        editor.putString("Idfacebook", "0");
 
                         editor.commit();
                         startActivity(new Intent(this, MenuActivity.class));

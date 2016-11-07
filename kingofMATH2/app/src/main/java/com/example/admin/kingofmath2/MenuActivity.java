@@ -148,6 +148,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                         testObject.put("name", login);
                         testObject.put("score", scorevalue);
                         testObject.put("idposition", share.getString("positionImage",""));
+                        testObject.put("idfacebook",  share.getString("Idfacebook","0"));
                         testObject.saveInBackground();
                         System.out.println("************************************************ajout1");
 

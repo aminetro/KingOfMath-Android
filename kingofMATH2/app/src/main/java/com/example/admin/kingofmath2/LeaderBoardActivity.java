@@ -1,10 +1,10 @@
 package com.example.admin.kingofmath2;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -43,10 +43,10 @@ public class LeaderBoardActivity extends AppCompatActivity implements AdapterVie
                 public void done(List<ParseObject> list, ParseException e) {
                     int i = 0;
                     for (ParseObject p : list) {
-                        Log.d("--", p.getObjectId());
-                        Log.d("--", (String) p.get("name"));
-                        Log.d("--", (String) p.get("idposition"));
-                        Log.d("--", String.valueOf((Integer) p.get("score")));
+                       p.getObjectId();
+                        p.get("name");
+                        p.get("idposition");
+                       p.get("score");
                         i = i + 1;
 
                     leaderBoard.add(new Leader(p.getObjectId(), (String) p.get("name"), String.valueOf((Integer) p.get("score")), i, (String) p.get("idfacebook"), (String) p.get("idposition")));
@@ -108,4 +108,6 @@ public class LeaderBoardActivity extends AppCompatActivity implements AdapterVie
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
     }
+
+
 }

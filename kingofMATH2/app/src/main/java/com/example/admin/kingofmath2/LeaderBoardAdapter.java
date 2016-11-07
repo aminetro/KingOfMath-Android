@@ -3,6 +3,8 @@ package com.example.admin.kingofmath2;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,6 +29,8 @@ public class LeaderBoardAdapter extends ArrayAdapter<Leader> {
     public static String PREFRENCE_FILNAME = "com.example.admin.kingofmath";
     SharedPreferences share;
     String ID;
+    RoundImage roundedImage1;
+    ImageView amine;
 
     public LeaderBoardAdapter(Context context, int resourceId, List<Leader> mediaItems) {
         super(context, 0, mediaItems);
@@ -72,32 +76,54 @@ public class LeaderBoardAdapter extends ArrayAdapter<Leader> {
         if(getItem(position).getIdposition().equals("3")){
             image.getLayoutParams().height = 120;
             image.getLayoutParams().width = 0;
-             image.setBackgroundResource(R.drawable.player3);
+            //image.setBackgroundResource(R.drawable.player3);
+            amine=(ImageView)view.findViewById(R.id.leaderImage);
+            Bitmap bm = BitmapFactory.decodeResource(this.getContext().getResources(), R.drawable.player3);
+            roundedImage1 = new RoundImage(bm);
+            amine.setImageDrawable(roundedImage1);
+
+
         }
         else if(getItem(position).getIdposition().equals("2")){
             image.getLayoutParams().height = 120;
             image.getLayoutParams().width = 0;
-            image.setBackgroundResource(R.drawable.player2);
+            //image.setBackgroundResource(R.drawable.player2);
+            amine=(ImageView)view.findViewById(R.id.leaderImage);
+            Bitmap bm = BitmapFactory.decodeResource(this.getContext().getResources(), R.drawable.player2);
+            roundedImage1 = new RoundImage(bm);
+            amine.setImageDrawable(roundedImage1);
         }
         else if(getItem(position).getIdposition().equals("1")){
             image.getLayoutParams().height = 120;
             image.getLayoutParams().width = 0;
-            image.setBackgroundResource(R.drawable.player1);
+            //image.setBackgroundResource(R.drawable.player1);
+            amine=(ImageView)view.findViewById(R.id.leaderImage);
+            Bitmap bm = BitmapFactory.decodeResource(this.getContext().getResources(), R.drawable.player1);
+            roundedImage1 = new RoundImage(bm);
+            amine.setImageDrawable(roundedImage1);
         }
         else if(getItem(position).getIdposition().equals("4")){
             image.getLayoutParams().height = 120;
             image.getLayoutParams().width = 0;
-            image.setBackgroundResource(R.drawable.player4);
+            //image.setBackgroundResource(R.drawable.player4);
+            amine=(ImageView)view.findViewById(R.id.leaderImage);
+            Bitmap bm = BitmapFactory.decodeResource(this.getContext().getResources(), R.drawable.player4);
+            roundedImage1 = new RoundImage(bm);
+            amine.setImageDrawable(roundedImage1);
         }
-        else if((!(getItem(position).getIdfacebook().equals("")))){
+       else if((!(getItem(position).getIdfacebook().equals("0")))){
             image.getLayoutParams().height = 120;
             image.getLayoutParams().width = 0;
             String profileImg = "https://graph.facebook.com/" +getItem(position).getIdfacebook() + "/picture?type=large&width=224";
-            Picasso.with(getContext()).load(profileImg).into(image);
+            Picasso.with(getContext()).load(profileImg).transform(new CircleTransform()).into(image);
         }else{
             image.getLayoutParams().height = 120;
             image.getLayoutParams().width = 0;
-            image.setBackgroundResource(R.drawable.player0);
+            //image.setBackgroundResource(R.drawable.player0);
+            amine=(ImageView)view.findViewById(R.id.leaderImage);
+            Bitmap bm = BitmapFactory.decodeResource(this.getContext().getResources(), R.drawable.player0);
+            roundedImage1 = new RoundImage(bm);
+            amine.setImageDrawable(roundedImage1);
         }
 
 
@@ -110,4 +136,5 @@ public class LeaderBoardAdapter extends ArrayAdapter<Leader> {
 
         return view;
     }
+
 }

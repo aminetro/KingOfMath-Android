@@ -10,6 +10,9 @@
     <application
         android:name=".ParseApplication"
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:supportsRtl="true"
         android:icon="@drawable/logo2"
         android:label="KingOfMath"
         android:theme="@style/AppTheme2" >
