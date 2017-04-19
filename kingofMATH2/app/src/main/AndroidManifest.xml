@@ -8,7 +8,7 @@
 
 
     <application
-        android:name=".ParseApplication"
+        android:name=".Utils.ParseApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:largeHeap="true"
@@ -20,7 +20,7 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/app_id" />
 
-        <activity android:name=".MainActivity"
+        <activity android:name=".Acitivities.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,7 +35,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".MenuActivity"
+            android:name=".Acitivities.MenuActivity"
             android:label="@string/title_activity_menu"
             android:screenOrientation="portrait">
         </activity>
@@ -45,7 +45,7 @@
         </intent-filter>
 
         <activity
-            android:name=".MultiplayerActivity"
+            android:name=".Acitivities.MultiplayerActivity"
             android:label="@string/title_activity_menu"
             android:screenOrientation="portrait">
         </activity>
@@ -55,7 +55,7 @@
         </intent-filter>
 
         <activity
-            android:name=".ListquizActivity"
+            android:name=".Acitivities.ListquizActivity"
             android:label="@string/title_activity_menu"
             android:screenOrientation="portrait">
         </activity>
@@ -65,7 +65,7 @@
         </intent-filter>
 
         <activity
-            android:name=".QuizGameActivity"
+            android:name=".Acitivities.QuizGameActivity"
             android:label="@string/title_activity_menu"
             android:screenOrientation="portrait">
         </activity>
@@ -75,29 +75,29 @@
         </intent-filter>
 
         <activity
-            android:name=".LeaderBoardActivity"
+            android:name=".Acitivities.LeaderBoardActivity"
             android:label="@string/title_activity_leader_board"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".AdventureActivity"
+        <activity android:name=".Acitivities.AdventureActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GameActivity"
+        <activity android:name=".Acitivities.GameActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".StatisticActivity"
+            android:name=".Acitivities.StatisticActivity"
             android:label="@string/title_activity_statistic"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".Tutorial_Activity"
+            android:name=".Acitivities.Tutorial_Activity"
             android:label="@string/title_activity_tutorial_"
             android:screenOrientation="portrait">
         </activity>

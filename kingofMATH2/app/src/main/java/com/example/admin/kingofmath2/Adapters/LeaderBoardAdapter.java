@@ -1,4 +1,4 @@
-package com.example.admin.kingofmath2;
+package com.example.admin.kingofmath2.Adapters;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -14,6 +14,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.admin.kingofmath2.Entities.Leader;
+import com.example.admin.kingofmath2.R;
+import com.example.admin.kingofmath2.Utils.CircleTransform;
+import com.example.admin.kingofmath2.Utils.RoundImage;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

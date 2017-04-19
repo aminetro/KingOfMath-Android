@@ -1,11 +1,11 @@
-package com.example.admin.kingofmath2;
+package com.example.admin.kingofmath2.Entities;
 
 /**
  * Created by ADMIN on 02/01/2016.
  */
 public class Leader {
 
-    public String Id;
+    public String objectId;
     public String name;
     public String score;
     int Rang;
@@ -29,11 +29,11 @@ public class Leader {
     }
 
     public String getId() {
-        return Id;
+        return objectId;
     }
 
     public void setId(String id) {
-        Id = id;
+        objectId = id;
     }
 
     public String getName() {
@@ -61,7 +61,7 @@ public class Leader {
     }
 
     public Leader(String id, String name,String score,  int rang, String idfacebook, String idposition) {
-        Id = id;
+        objectId = id;
         Rang = rang;
         this.score = score;
         this.name = name;
@@ -69,6 +69,11 @@ public class Leader {
         this.idposition=idposition;
 
     }
+    public Leader() {
+
+
+    }
+
 
 
 

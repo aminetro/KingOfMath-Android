@@ -5,7 +5,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:background="@drawable/b8"
-    tools:context="com.example.admin.kingofmath2.StatisticActivity">
+    tools:context="com.example.admin.kingofmath2.Acitivities.StatisticActivity">
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"

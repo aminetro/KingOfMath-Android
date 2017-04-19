@@ -27,6 +27,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.parse.bolts:bolts-android:1.+'
+
+    compile group: 'com.backendless', name: 'backendless', version: '4.0.0-beta1'
     compile 'com.parse:parse-android:1.+'
     compile 'com.facebook.android:facebook-android-sdk:4.7.0'
     compile 'com.squareup.picasso:picasso:2.5.2'

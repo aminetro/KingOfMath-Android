@@ -1,4 +1,4 @@
-package com.example.admin.kingofmath2;
+package com.example.admin.kingofmath2.Entities;
 
 public class Quiz {
 	public int Image;

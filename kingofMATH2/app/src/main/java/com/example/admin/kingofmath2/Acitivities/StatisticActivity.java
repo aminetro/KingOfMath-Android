@@ -1,4 +1,4 @@
-package com.example.admin.kingofmath2;
+package com.example.admin.kingofmath2.Acitivities;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -14,6 +14,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.admin.kingofmath2.R;
+import com.example.admin.kingofmath2.Utils.CircleTransform;
+import com.example.admin.kingofmath2.Utils.DBHelper;
+import com.example.admin.kingofmath2.Utils.RoundImage;
 import com.facebook.share.ShareApi;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;

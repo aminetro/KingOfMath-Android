@@ -1,4 +1,4 @@
-package com.example.admin.kingofmath2;
+package com.example.admin.kingofmath2.Entities;
 
 /**
  * Created by esprit on 10/24/2015.

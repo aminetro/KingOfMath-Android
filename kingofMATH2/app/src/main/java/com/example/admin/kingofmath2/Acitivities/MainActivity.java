@@ -1,4 +1,4 @@
-package com.example.admin.kingofmath2;
+package com.example.admin.kingofmath2.Acitivities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +16,12 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.backendless.Backendless;
+import com.example.admin.kingofmath2.Entities.Player;
+import com.example.admin.kingofmath2.R;
+import com.example.admin.kingofmath2.Utils.DBHelper;
+import com.example.admin.kingofmath2.Utils.Defaults;
+import com.example.admin.kingofmath2.Utils.RoundImage;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -33,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button connect;
     RoundImage roundedImage1,roundedImage2,roundedImage3,roundedImage4;
     int positionImage=0;
+    String aBoolean= "";
     EditText editText;
     public static String PREFRENCE_FILNAME = "com.example.admin.kingofmath";
     SharedPreferences share;
@@ -43,6 +50,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
+
+
+        Backendless.setUrl( Defaults.SERVER_URL );
+        Backendless.initApp( getApplicationContext(), Defaults.APPLICATION_ID, Defaults.API_KEY );
+
         setContentView(R.layout.activity_main);
         connect=(Button)findViewById(R.id.button);
 
@@ -82,6 +94,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 player1.setBackgroundResource(R.drawable.some_selector_name);
                 positionImage = 0;
                 positionImage = positionImage + 1;
+
+                aBoolean= "";
             }
         });
 
@@ -93,6 +107,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 player2.setBackgroundResource(R.drawable.some_selector_name);
                 positionImage=0;
                 positionImage=positionImage+2;
+                aBoolean= "";
             }
         });
 
@@ -104,6 +119,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 player3.setBackgroundResource(R.drawable.some_selector_name);
                 positionImage=0;
                 positionImage=positionImage+3;
+                aBoolean= "";
             }
         });
 
@@ -115,6 +131,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 player4.setBackgroundResource(R.drawable.some_selector_name);
                 positionImage=0;
                 positionImage=positionImage+4;
+                aBoolean= "";
             }
         });
 
@@ -147,10 +164,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 editor.putString("loginShared", name);
                                 editor.putString("Idfacebook", id);
                                 editor.putString("positionImage",String.valueOf(0));
+                                aBoolean= "FB";
+                                editor.putString("choice", aBoolean);
                                 editor.commit();
                                 startActivity(new Intent(getApplication(), MenuActivity.class));
                                 Log.d("Name :    ", name);
                                 Log.d("id :     ", object.optString("id"));
+
 
                             }
 
@@ -263,6 +283,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     db.insertCandidat(c45);
                     db.insertCandidat(c46);
                 }
+
                 startActivity(new Intent(getApplicationContext(), MenuActivity.class));
 
             }
@@ -366,8 +387,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         SharedPreferences.Editor editor=share.edit();
                         editor.putString("loginShared", login);
                         editor.putString("positionImage", String.valueOf(positionImage));
-                        editor.putString("Idfacebook", "0");
 
+                        editor.putString("choice", aBoolean);
                         editor.commit();
                         startActivity(new Intent(this, MenuActivity.class));
 

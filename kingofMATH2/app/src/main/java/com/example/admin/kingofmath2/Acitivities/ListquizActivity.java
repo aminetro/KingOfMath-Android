@@ -1,4 +1,4 @@
-package com.example.admin.kingofmath2;
+package com.example.admin.kingofmath2.Acitivities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.example.admin.kingofmath2.Adapters.QuizCustomAdapter;
+import com.example.admin.kingofmath2.Entities.Quiz;
+import com.example.admin.kingofmath2.R;
+import com.example.admin.kingofmath2.Utils.DBHelper;
 
 import java.util.ArrayList;
 import java.util.List;

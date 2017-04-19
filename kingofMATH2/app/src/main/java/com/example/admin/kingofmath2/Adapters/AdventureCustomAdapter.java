@@ -1,4 +1,4 @@
-package com.example.admin.kingofmath2;
+package com.example.admin.kingofmath2.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+
+import com.example.admin.kingofmath2.Entities.Adventure;
+import com.example.admin.kingofmath2.Acitivities.GameActivity;
+import com.example.admin.kingofmath2.R;
+import com.example.admin.kingofmath2.Utils.DBHelper;
 
 import java.util.List;
 
@@ -56,6 +61,35 @@ public class AdventureCustomAdapter extends ArrayAdapter<Adventure> {
 			  button5.setBackgroundResource(R.drawable.level5); button6.setBackgroundResource(R.drawable.level6);
 			  button7.setBackgroundResource(R.drawable.level7); button8.setBackgroundResource(R.drawable.level8);
 			  button9.setBackgroundResource(R.drawable.level9); button10.setBackgroundResource(R.drawable.level10);
+
+			  ((ViewGroup.MarginLayoutParams) button1.getLayoutParams()).leftMargin = 115;
+
+			  ((ViewGroup.MarginLayoutParams) button2.getLayoutParams()).leftMargin = 200;
+			  ((ViewGroup.MarginLayoutParams) button2.getLayoutParams()).topMargin = 200;
+
+			  ((ViewGroup.MarginLayoutParams) button3.getLayoutParams()).leftMargin = 370;
+			  ((ViewGroup.MarginLayoutParams) button3.getLayoutParams()).topMargin = 230;
+
+			  ((ViewGroup.MarginLayoutParams) button4.getLayoutParams()).leftMargin = 560;
+			  ((ViewGroup.MarginLayoutParams) button4.getLayoutParams()).topMargin = 300;
+
+			  ((ViewGroup.MarginLayoutParams) button5.getLayoutParams()).leftMargin = 320;
+			  ((ViewGroup.MarginLayoutParams) button5.getLayoutParams()).topMargin = 410;
+
+			  ((ViewGroup.MarginLayoutParams) button6.getLayoutParams()).leftMargin = 110;
+			  ((ViewGroup.MarginLayoutParams) button6.getLayoutParams()).topMargin = 500;
+
+			  ((ViewGroup.MarginLayoutParams) button7.getLayoutParams()).leftMargin = 465;
+			  ((ViewGroup.MarginLayoutParams) button7.getLayoutParams()).topMargin = 520;
+
+			  ((ViewGroup.MarginLayoutParams) button8.getLayoutParams()).leftMargin = 560;
+			  ((ViewGroup.MarginLayoutParams) button8.getLayoutParams()).topMargin = 700;
+
+			  ((ViewGroup.MarginLayoutParams) button9.getLayoutParams()).leftMargin = 300;
+			  ((ViewGroup.MarginLayoutParams) button9.getLayoutParams()).topMargin = 720;
+
+			  ((ViewGroup.MarginLayoutParams) button10.getLayoutParams()).leftMargin = 470;
+			  ((ViewGroup.MarginLayoutParams) button10.getLayoutParams()).topMargin = 850;
 
 			  button1.setOnClickListener(new View.OnClickListener() {
 				  @Override

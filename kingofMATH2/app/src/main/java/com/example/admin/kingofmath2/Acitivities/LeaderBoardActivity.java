@@ -1,10 +1,10 @@
-package com.example.admin.kingofmath2;
+package com.example.admin.kingofmath2.Acitivities;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,10 +12,14 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.parse.FindCallback;
-import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
+import com.backendless.Backendless;
+import com.backendless.async.callback.AsyncCallback;
+import com.backendless.exceptions.BackendlessFault;
+import com.backendless.persistence.DataQueryBuilder;
+import com.example.admin.kingofmath2.Adapters.LeaderBoardAdapter;
+import com.example.admin.kingofmath2.Entities.Leader;
+import com.example.admin.kingofmath2.R;
+import com.example.admin.kingofmath2.Utils.Defaults;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +31,11 @@ public class LeaderBoardActivity extends AppCompatActivity implements AdapterVie
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Backendless.setUrl( Defaults.SERVER_URL );
+        Backendless.initApp( getApplicationContext(), Defaults.APPLICATION_ID, Defaults.API_KEY );
+
         setContentView(R.layout.activity_leader_board);
+
         maListViewLeader = (ListView) findViewById(R.id.leaderboardList);
 
 
@@ -36,7 +44,29 @@ public class LeaderBoardActivity extends AppCompatActivity implements AdapterVie
 
         System.out.println("***************Verif***************" + cm.getActiveNetworkInfo());
         if(cm.getActiveNetworkInfo()!=null) {
-            ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("TestObject");
+            DataQueryBuilder queryBuilder = DataQueryBuilder.create();
+            queryBuilder.setSortBy( "score DESC" );
+            Backendless.Persistence.of( Leader.class ).find(queryBuilder, new AsyncCallback<List<Leader>>() {
+
+                @Override
+                public void handleResponse(List<Leader> response) {
+                    int rank=0;
+                    for (Leader one : response) {
+                        rank++;
+                        one.setRang(rank);
+                        leaderBoard.add(one);
+                        maListViewLeader.setAdapter(new LeaderBoardAdapter(getBaseContext(), R.layout.oneleader, leaderBoard));
+
+                    }
+                }
+
+                @Override
+                public void handleFault(BackendlessFault fault) {
+                    Log.e( "MYAPP", "Server reported an error " + fault.getMessage() );
+                }
+            });
+
+            /*ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("TestObject");
             query.addDescendingOrder("score");
             query.findInBackground(new FindCallback<ParseObject>() {
                 @Override
@@ -54,7 +84,7 @@ public class LeaderBoardActivity extends AppCompatActivity implements AdapterVie
 
                     }
                 }
-            });
+            });*/
         }
         else {
             Toast.makeText(getApplicationContext(),"No internet connexion",

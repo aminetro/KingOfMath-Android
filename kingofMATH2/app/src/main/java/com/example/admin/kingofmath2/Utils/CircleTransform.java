@@ -1,4 +1,4 @@
-package com.example.admin.kingofmath2;
+package com.example.admin.kingofmath2.Utils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
